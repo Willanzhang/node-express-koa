@@ -14,11 +14,12 @@ const handleUserRouter = (req, res) => {
 
     console.log('idnex- test', path);
     // 登录
-    if (method === 'GET' && path === '/api/user/login') {
-        // const { username, password } = req.body
-        const { username, password } = req.query
+    if (method === 'POST' && path === '/api/user/login') {
+        const { username, password } = req.body
+        // const { username, password } = req.query
         const result = login(username, password)
         return result.then(data => {
+            console.log('data', data);
             if (data.username) {              
                 // 设置 session
                 req.session.username = data.username
