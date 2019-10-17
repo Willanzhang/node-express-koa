@@ -1,3 +1,9 @@
   <-- GET /api/blog/list?isadmin=1
 GET /api/blog/list?isadmin=1 - 21ms
   --> GET /api/blog/list?isadmin=1 200 77ms 263b
+  <-- GET /api/blog/list?isadmin=1
+GET /api/blog/list?isadmin=1 - 5ms
+  --> GET /api/blog/list?isadmin=1 200 6ms 263b
+  <-- GET /api/blog/list?isadmin=1
+GET /api/blog/list?isadmin=1 - 3ms
+  --> GET /api/blog/list?isadmin=1 200 5ms 263b
