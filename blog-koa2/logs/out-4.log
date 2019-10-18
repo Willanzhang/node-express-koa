@@ -7,3 +7,12 @@ GET /api/blog/list?isadmin=1 - 5ms
   <-- GET /api/blog/list?isadmin=1
 GET /api/blog/list?isadmin=1 - 3ms
   --> GET /api/blog/list?isadmin=1 200 5ms 263b
+  <-- GET /api/blog/list
+GET /api/blog/list - 20ms
+  --> GET /api/blog/list 200 31ms 577b
+  <-- GET /favicon.ico
+GET /favicon.ico - 3ms
+  --> GET /favicon.ico 404 4ms -
+  <-- GET /api/blog/list?isadmin=1
+GET /api/blog/list?isadmin=1 - 4ms
+  --> GET /api/blog/list?isadmin=1 200 6ms 34b
