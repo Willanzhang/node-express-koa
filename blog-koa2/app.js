@@ -51,10 +51,10 @@ if (ENV !== 'production') {
 	const writeStream = fs.createWriteStream(logFileName, {
 		flags: 'a'
 	})
-	app.use(morgan('combined', {
-		// stream: process.stdout // 默认控制台输出
-		stream: writeStream
-	}));
+	// app.use(morgan('combined', {
+	// 	// stream: process.stdout // 默认控制台输出
+	// 	stream: writeStream
+	// }));
 }
 
 // 写在 rooter 注册前
