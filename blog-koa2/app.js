@@ -13,6 +13,7 @@ const morgan = require('koa-morgan')
 
 const blog = require('./routes/blog')
 const user = require('./routes/user')
+const proxy = require('./routes/proxy')
 
 const { REDIS_CONF } = require('./conf/db');
 
@@ -75,6 +76,7 @@ app.use(session({
 // routes
 app.use(blog.routes(), blog.allowedMethods())
 app.use(user.routes(), user.allowedMethods())
+app.use(proxy.routes(), proxy.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {

@@ -49,7 +49,7 @@ function exec(sql) {
     const promise = new Promise((resolve, reject) => {
         //建立链接
         pool.getConnection(function (err, connection) {
-            if (err) { 
+            if (err) {
                 throw err;
             }
             connection.query(sql, function (error, results) {
