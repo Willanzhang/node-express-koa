@@ -31,24 +31,30 @@
 
 // ################################################################
 // 这不可行：
-const fs = require('fs');
+// const fs = require('fs');
+// try {
+//     fs.readFile('./index.jsx', (err, data) => {
+//         if (err) {
+//             throw '123';
+//         }
+//         // let result = Buffer.from(data).toString('utf8');
+//         // console.log(result);
+//     });
+// } catch(e) {
+//     console.log(e);
+// }
+
+// // 捕获未捕获的错误
+// process.on('uncaughtException', (e) => {
+//     console.log('----------');
+//     console.log(e)
+// })
+// https://cn6.343480.com/20191220/q2lGmxgj/800kb/hls/Fgrqi8xR.ts  46
+
+// https://cn6.343480.com/ppvod/eQy2PiQe
 try {
-    fs.readFile('./index.jsx', (err, data) => {
-        if (err) {
-            throw '123';
-        }
-        // let result = Buffer.from(data).toString('utf8');
-        // console.log(result);
-    });
-} catch(e) {
-    console.log(e);
-}
-
-// 捕获未捕获的错误
-process.on('uncaughtException', (e) => {
-    console.log('----------');
-    console.log(e)
-})
-https://cn6.343480.com/20191220/q2lGmxgj/800kb/hls/Fgrqi8xR.ts  46
-
-https://cn6.343480.com/ppvod/eQy2PiQe
+    require('vm').runInThisContext('nodejs.cn; console.log("cc")');
+  } catch (err) {
+      console.log(err);
+    // `err` 是一个 SyntaxError。
+  }
