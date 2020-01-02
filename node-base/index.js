@@ -45,6 +45,7 @@ http.get('http://blog.zhangbowen.club/api/proxy/get-proxy', (res) => {
 
 http.createServer((req, res) => {
     console.log('监听9999', eid);
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end(JSON.stringify({
         errCode: 1
     }))
